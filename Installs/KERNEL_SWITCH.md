@@ -13,12 +13,12 @@ yay -S linux-lqx linux-lqx-headers
 
 #### 3. Create initial ramdisk with mkinitcpio
 ```sh
-mkinitcpio -p linux-lqx
+sudo mkinitcpio -p linux-lqx
 ```
 
 #### 4. Create new GRUB config
 ```sh
-grub-mkconfig -o /boot/grub/grub.cfg
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 #### 5. Reboot
