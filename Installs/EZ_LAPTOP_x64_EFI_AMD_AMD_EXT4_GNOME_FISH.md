@@ -111,31 +111,33 @@ gdisk /dev/nvme0n1
 	4. For "Last sector ..." write `+1G` and press `enter`
 	5. For "Hex code or GUID ..." write `ef00` and press `enter`
 
-7. Create 444G main partition
+6. Create 444G main partition
 	1. For "Command (? for help)" write  `n` and press `enter`
 	2. For "Partition number" just press `enter`
 	3. For "First sector ..." just press `enter`
 	4. For "Last sector ..." write `+444G` and press `enter`
 	5. For "Hex code or GUID ..." just press `enter`
 
-9. Create 20G swap partition
+7. Create 20G swap partition
 	1. For "Command (? for help)" write  `n` and press `enter`
 	2. For "Partition number" just press `enter`
 	3. For "First sector ..." just press `enter`
 	4. For "Last sector ..." just press `enter`
 	5. For "Hex code or GUID ..." write `8200` and press `enter`
 
-11. Format the boot partition
+8. Write `w` and press `enter`
+
+9. Format the boot partition
 ```bash
 mkfs.fat -F32 /dev/nvme0n1p1
 ```
 
-8. Format the main partition
+10. Format the main partition
 ```bash
 mkfs.ext4 /dev/nvme0n1p2
 ```
 
-9. Format the swap partitoin
+11. Format the swap partitoin
 ```bash
 mkswap /dev/nvme0n1p3
 ```
